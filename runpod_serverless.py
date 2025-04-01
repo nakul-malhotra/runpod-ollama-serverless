@@ -11,8 +11,7 @@ def handler(job):
     resp = requests.post(
         url=f"{base_url}/api/{job['input']['method_name']}/",
         headers={"Content-Type": "application/json"},
-        json=payload,
-        stream=True
+        json=payload
     )
     resp.encoding = "utf-8"
 
