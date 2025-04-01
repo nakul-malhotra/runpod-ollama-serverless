@@ -7,7 +7,7 @@ WORKDIR /app
 RUN apt-get update --yes --quiet && \
     DEBIAN_FRONTEND=noninteractive apt-get install --yes --quiet pip \
     && rm -rf /var/lib/apt/lists/*
-    
+
 # Install application dependencies
 ADD requirements.txt .
 RUN pip install -r requirements.txt --no-cache-dir
@@ -19,4 +19,4 @@ ADD start-ollama-serverless.sh .
 # Override Ollama's entrypoint
 ENTRYPOINT ["/bin/bash", "/app/start-ollama-serverless.sh"]
 
-CMD ["llama3:latest"]
+CMD ["gemma3:27b"]
