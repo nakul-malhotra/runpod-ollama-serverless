@@ -6,12 +6,15 @@ from typing import Dict, Any
 
 
 def handler(job):
-    base_url = "http://localhost:11434"
     
+    model = "eramax/gemma-3-27b-it-qat:q4_0"
+    old_model = "gemma3:27b"
+    base_url = "http://localhost:11434"
+
     # Extract input parameters
     input_data = job.get("input", {})
     prompt = input_data.get("prompt", "")
-    model = input_data.get("model", "gemma3:27b")
+    model = input_data.get("model", model)
     sampling_params = input_data.get("sampling_params", {})
     
     # Prepare payload
