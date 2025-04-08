@@ -2,7 +2,7 @@
     "input": {
         "method_name": "generate",
         "payload": {
-            "model": "llama3:latest",
+            "model": "gemma3:27b",
             "prompt": "Is eBPF already part of Linux Kernel ?"
         }
     }

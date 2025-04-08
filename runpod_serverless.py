@@ -7,8 +7,8 @@ from typing import Dict, Any
 
 def handler(job):
     
-    model = "eramax/gemma-3-27b-it-qat:q4_0"
-    old_model = "gemma3:27b"
+    old_model = "eramax/gemma-3-27b-it-qat:q4_0"
+    model = "gemma3:27b"
     base_url = "http://localhost:11434"
 
     # Extract input parameters
